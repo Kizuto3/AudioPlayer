@@ -44,6 +44,15 @@
     <Reference Include="Microsoft.Windows.Shell, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Windows.Shell.3.0.1.0\lib\net40\Microsoft.Windows.Shell.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Core.1.1.0.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="PropertyChanged, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
       <HintPath>..\packages\PropertyChanged.Fody.2.6.0\lib\net452\PropertyChanged.dll</HintPath>
     </Reference>
@@ -71,10 +80,12 @@
     <Compile Include="Pages\SongListPage.xaml.cs">
       <DependentUpon>SongListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Songs\Song.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
+    <Compile Include="ViewModel\SongsViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
     <Page Include="MainWindow.xaml">
@@ -157,14 +168,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Window\App.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Fonts\icon.ico" />
     <Resource Include="Images\Logo\logo-small.png" />
     <Resource Include="Images\Logo\logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\Buttons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Media\Trading_Yesterday_She_Is_The_Sunlight.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

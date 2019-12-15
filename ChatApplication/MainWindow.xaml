@@ -12,7 +12,7 @@
         MinWidth="{Binding WindowMinWidth}"
         mc:Ignorable="d"
         Icon="Images/Logo/logo-small.png"
-        Title="Welcome, Friend!" Height="600" Width="900">
+        Title="Miracle (Pre-Alpha)" Height="600" Width="800">
 
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">

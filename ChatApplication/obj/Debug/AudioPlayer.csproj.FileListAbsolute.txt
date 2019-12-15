@@ -23,6 +23,15 @@ C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\Styles\Fo
 C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.g.resources
 C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
 C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\AudioPlayer.csproj.GenerateResource.cache
-C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\AudioPlayer.csproj.CoreCompileInputs.cache
 C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\AudioPlayer.csproj.Fody.CopyLocal.cache
 C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\AudioPlayer.csproj.CopyComplete
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication_Content.g.cs
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.pdb
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+C:\Users\Kizuto\source\repos\ChatApplication\ChatApplication\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.xml

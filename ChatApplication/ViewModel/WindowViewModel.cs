@@ -28,8 +28,6 @@ namespace ChatApplication
         /// </summary>
         private int mWindowRadius = 10;
 
-        private int mInnerContentPadding = 6;
-
         #endregion
 
         #region Public Properties

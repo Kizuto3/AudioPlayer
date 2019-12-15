@@ -5,10 +5,69 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ChatApplication.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="{Binding Height, FallbackValue=450}" d:DesignWidth="{Binding Width, FallbackValue=800}"
       Title="SongListPage">
-
+    
     <Grid>
-        <Button Content="Test"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+            
+            <ListView x:Name="SongList" ItemsSource="{Binding Songs}" SelectedItem="{Binding CurrentSong}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="{Binding ColumnWidth, FallbackValue=266}" Header="Artist"
+         DisplayMemberBinding="{Binding Artist}"/>
+                        <GridViewColumn Width="{Binding ColumnWidth, FallbackValue=266}" Header="Title"  
+         DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Width="{Binding ColumnWidth, FallbackValue=266}" Header="Album"
+         DisplayMemberBinding="{Binding Album}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+        </ScrollViewer>
+
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="1">
+            
+            <!-- To interactively stop, pause, and play the media, the LoadedBehavior 
+           property of the MediaElement must be set to "Manual". -->
+            <MediaElement Source="{Binding SongPath}" Name="myMediaElement" 
+                LoadedBehavior="Manual" UnloadedBehavior="Stop" Stretch="Fill" 
+                           Volume="{Binding Volume}"/>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <!-- Seek to slider. Ths slider allows you to jump to different parts of the media playback. -->
+                <TextBlock Margin="5"  VerticalAlignment="Center" FontSize="20" Text="{Binding CurrentSongTimeString, FallbackValue=0}"/>
+                <Slider VerticalAlignment="Center" Name="timelineSlider" Margin="5" Value="{Binding CurrentSongTime}" Maximum="{Binding SongDuration}" Width="300"/>
+
+                <TextBlock Margin="5"  VerticalAlignment="Center" FontSize="20" Text="{Binding SongDurationString, FallbackValue=0}"/>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+
+                <Button Command="{Binding ChooseFilesCommand}" VerticalAlignment="Center" Margin="5" Content="Choose Audio Files"/>
+
+                <!-- Play button. -->
+                <Button Margin="5" Command="{Binding PlayCommand}">
+                    <Image Source="C:\\Users\\Kizuto\\source\\repos\\ChatApplication\\ChatApplication\\Images\\Buttons\\play.png" Width="50" Margin="5" />
+                </Button>
+                
+
+                <!-- Pause button. -->
+                <Button Margin="5" Command="{Binding PauseCommand}">
+                    <Image Source="C:\\Users\\Kizuto\\source\\repos\\ChatApplication\\ChatApplication\\Images\\Buttons\\pause.png" Width="50" Margin="5" />
+                </Button>
+                
+                <!-- Volume slider. This slider allows a Volume range between 0 and 1. -->
+                <TextBlock VerticalAlignment="Center" Margin="5" FontSize="20">Volume</TextBlock>
+                <Slider Name="volumeSlider" VerticalAlignment="Center" Value="{Binding Volume}"
+       Minimum="0" Maximum="1" Width="70"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
+
 </Page>

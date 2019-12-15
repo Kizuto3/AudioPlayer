@@ -11,7 +11,7 @@ namespace ChatApplication
         #region Private members
 
         /// <summary>
-        /// The action to ren
+        /// The action to run
         /// </summary>
         private Action _action;
 
